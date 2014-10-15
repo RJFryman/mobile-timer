@@ -5,11 +5,22 @@ html
     meta(name='viewport', content='initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width')
     title
     link(href='css/ionic.app.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
     script(src='lib/ionic/js/ionic.bundle.js')
     script(src='cordova.js')
     script(src='js/app.js')
+    script(src='js/main_controller.js')
   body(ng-app='rjf-timer')
     ion-pane
-      ion-header-bar.bar-stable
+      ion-header-bar.bar-calm
         h1.title RJF-Timer
-      ion-content
+      ion-content.has-header(ng-controller='MainCtrl')
+        .display {{clock}} s
+        form(role='form', name='timerForm')
+          label.item.item-input
+            input(type='range', ng-model='clock', min='0', max='600')
+        .button-bar
+          a.button(ng-click='start()') Start Timer
+      .bar.bar-footer.bar-calm
+        .title
+          small @RJFryman
