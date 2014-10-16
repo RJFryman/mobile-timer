@@ -19,8 +19,8 @@
       <ion-content ng-controller="MainCtrl" class="has-header">
         <div class="display">{{clock}} s</div>
         <form role="form" name="timerForm">
-          <label class="item item-input">
-            <input type="range" ng-model="clock" min="0" max="600">
+          <label class="item item-input"><i class="icon ion-ios7-stopwatch-outline"></i>
+            <input type="range" ng-model="clock" min="0" max="600"><i class="icon ion-ios7-stopwatch"></i>
           </label>
         </form>
         <div class="button-bar"><a ng-click="start()" class="button">Start Timer</a></div>

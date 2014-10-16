@@ -18,7 +18,9 @@ html
         .display {{clock}} s
         form(role='form', name='timerForm')
           label.item.item-input
+            i.icon.ion-ios7-stopwatch-outline
             input(type='range', ng-model='clock', min='0', max='600')
+            i.icon.ion-ios7-stopwatch
         .button-bar
           a.button(ng-click='start()') Start Timer
       .bar.bar-footer.bar-calm
